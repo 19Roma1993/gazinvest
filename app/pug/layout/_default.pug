@@ -1,0 +1,13 @@
+doctype html
+html.no-js(lang='en')
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='x-ua-compatible', content='ie=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		title Title
+		include ../components/_link-css.pug
+	body
+		include ../components/_header.pug
+		block page
+		include ../components/_footer.pug
+		include ../components/_link-js.pug
