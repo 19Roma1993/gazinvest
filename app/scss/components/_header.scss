@@ -1,17 +1,66 @@
 /*  HEADER  */
 .header{
-  background-color: rgba(31, 34, 37, 0.6);
-}
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  }
+.main-menu-wrap{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: get-color(secondary);
+  transform: translateX(100%);
+  transition: transform 300ms linear;
+  &.active{
+    transform: translateX(0);
+    }
+  }
+.free-space.active{
+  position: absolute;
+  left: -50%;
+  right: 100%;
+  top: 0;
+  bottom: 0;
+  }
 .main-menu, .lang-switcher{
   @include menu-base;
   @include menu-direction(vertical);
-}
-.lang-switcher-wrap{
-  position: relative;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  a{
+    color: $white;
+    }
+  }
+.logo-mobile{
+  padding: 2.5rem 1.5rem;
+  }
+.menu-icon-mobile{
+  margin: 2.5rem 1.5rem 0 0;
+  }
+.main-menu{
+  font-family: 'GothamProNarrow-Bold';
+  margin: 0 0.5rem;
+  a{
+    &:hover, &:focus{
+      color: get-color(primary);
+      }
+    }
 }
 .lang-switcher {
-  position: absolute;
-  top: 0;
+  position: relative;
+  display: inline-block;
+  margin: 2.5rem 0.5rem;
+  li:nth-child(1){
+    &:after{
+      content: url('../upload/arr-down.png');
+      position: absolute;
+      right: 0;
+      top: 0.5rem;
+      }
+    }
   li:nth-child(2){
     margin-top: 1rem;
     position: relative;
@@ -30,6 +79,12 @@
   li:nth-child(n+2){
     display: none;
     background-color: $white;
+    a{
+      color: $dark-gray;
+      &:hover, &:focus{
+        color: get-color(primary);
+        }
+      }
   }
   &:hover{
     li:nth-child(n+2){
@@ -38,11 +93,35 @@
     }
   }
 }
+
 @media screen and #{breakpoint(medium)} {
+  .header{
+    background-color: rgba(31, 34, 37, 0.6);
+    padding: 1rem 0 1.6rem;
+    }
+  .main-menu-wrap{
+    position: relative;
+    background-color: transparent;
+    transform: translateX(0);
+    }
+  .main-menu-wrap, .lang-switcher-wrap{
+    margin-top: 2.5rem;
+    }
   .main-menu{
     @include menu-direction(horizontal);
     float: right;
   }
+  .main-menu, .lang-switcher{
+    font-size: 0.875rem;
+    }
+  .lang-switcher-wrap{
+    position: relative;
+    }
+  .lang-switcher {
+    position: absolute;
+    top: 0;
+    margin: 0;
+    }
 }
 @keyframes fadein {
   0% {

@@ -38,6 +38,11 @@ gulp.task('js', function () {
         .pipe(gulp.dest('build/js'));
 });
 
+gulp.task('fonts', function () {
+  return gulp.src('app/fonts/**/*')
+    .pipe(gulp.dest('build/fonts'))
+});
+
 gulp.task('upload', function () {
     return gulp.src('app/upload/**/*')
         .pipe(gulp.dest('build/upload'))
@@ -51,7 +56,7 @@ gulp.task('browser-sync', function () {
     });
 });
 
-gulp.task('watch', ['delete', 'browser-sync', 'upload', 'js', 'scss', 'pug'], function () {
+gulp.task('watch', ['delete', 'browser-sync', 'upload', 'fonts', 'js', 'scss', 'pug'], function () {
     gulp.watch('app/pug/**/*.pug', ['pug']);
     gulp.watch('app/scss/**/*.scss', ['scss']);
     gulp.watch('app/js/**/*.js', ['js']);
