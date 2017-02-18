@@ -1,8 +1,11 @@
 extends ../layout/_default.pug
 
 block page
-	.content
-		img(src='http://placehold.it/1920x1080')
-
-
-
+	.orbit.main-slider
+		ul.orbit-container
+			li.orbit-slide.row.expanded(style="background-image: url('upload/photo1.jpg')")
+				.slide-content.small-10.small-centered.columns.text-center
+					img(src='upload/slider-logo.png' width='380')
+			li.orbit-slide.row.expanded(style="background-image: url('upload/photo2.jpg')")
+				.slide-content.small-10.small-centered.columns.text-center
+					img(src='upload/slider-logo.png' width='380')

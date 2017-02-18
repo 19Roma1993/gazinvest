@@ -20,7 +20,8 @@ gulp.task('pug', function () {
 gulp.task('scss', function () {
     return gulp.src('app/scss/**/*.scss')
         .pipe(scss({
-            includePaths: ['node_modules/foundation-sites/scss'],
+            includePaths: ['node_modules/foundation-sites/scss',
+                'node_modules//motion-ui/src'],
             outputStyle: 'expanded'
         }))
         .pipe(autoprefixer({
