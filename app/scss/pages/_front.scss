@@ -27,9 +27,53 @@
 
 .section-desc {
   h3 {
-    margin: 3.125rem 0 2.5rem ;
+    margin: 3.125rem 0 2.5rem;
     font-weight: 500;
   }
+}
+
+.team-divider{
+  position: relative;
+  border-bottom: 3px solid $primary-color;
+  &:after{
+    content: '';
+    height: 12px;
+    width: 20px;
+    background-image: url('../upload/team-arr.png');
+    background-size: cover;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translate(-50%,0);
+    z-index: 2;
+  }
+}
+
+.team-tabs {
+  .team-img {
+    border-radius: 50%;
+    width: 7rem;
+  }
+  .is-active {
+    position: relative;
+    .team-img {
+      border: 3px solid $primary-color;
+    }
+  }
+}
+
+.team-name {
+  margin: 0.9rem 0;
+  font-size: 0.9rem;
+}
+
+.team-post {
+  line-height: 1.5;
+}
+
+.team-content {
+  @include grid-column-gutter(0);
+  padding-top: 1.5rem;
 }
 
 @media screen and #{breakpoint(medium)} {
@@ -61,4 +105,30 @@
       font-weight: 500;
     }
   }
+  .team-tabs{
+    .tabs-title{
+      @include grid-column-margin(0, 0);
+      padding-bottom: 2rem;
+      position: relative;
+      &.is-active {
+        &:after{
+          content: '';
+          height: 12px;
+          width: 20px;
+          background-image: url('../upload/team-arr.png');
+          background-size: cover;
+          position: absolute;
+          bottom: -12px;
+          left: 50%;
+          transform: translate(-50%,0);
+          z-index: 2;
+        }
+      }
+    }
+  }
+  .team-divider{
+     &:after{
+       display: none;
+     }
+   }
 }

@@ -19,4 +19,6 @@ $(document).ready(function () {
         animInFromLeft: 'fade-in',
         animOutToLeft: 'fade-out'
     });
+
+    $('#team-tabs').foundation('selectTab', $('.team-content').find('.tabs-panel').first().attr('id'));
 });
