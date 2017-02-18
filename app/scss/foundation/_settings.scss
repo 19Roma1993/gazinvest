@@ -104,19 +104,19 @@ $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: rgb(42, 198, 249),
-  secondary: #383D3F,
+  primary: #2ac6f9,
+  secondary: #383d3f,
   success: #3adb76,
   warning: #ffae00,
   alert: #cc4b37,
 );
-$light-gray: #e6e6e6;
-$medium-gray: #cacaca;
+$light-gray: #6f6f6f;
+$medium-gray: #353535;
 $dark-gray: #222F39;
 $black: #000;
 $white: #fff;
 $body-background: $white;
-$body-font-color: $black;
+$body-font-color: $light-gray;
 $body-font-family: 'GothamPro', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
@@ -158,13 +158,15 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: $body-font-family;
+$header-font-family: 'GothamPro-Bold', $body-font-family;
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
-$header-color: inherit;
-$header-lineheight: 1.4;
-$header-margin-bottom: 0.5rem;
+$header-color: $black;
+//$header-lineheight: 1.4;
+$header-lineheight: 1;
+//$header-margin-bottom: 0.5rem;
+$header-margin-bottom: 0;
 $header-styles: (
   small: (
     'h1': ('font-size': 24),

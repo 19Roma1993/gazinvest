@@ -1,7 +1,7 @@
 extends ../layout/_default.pug
 
 block page
-	.orbit.main-slider
+	section.orbit.main-slider
 		ul.orbit-container
 			li.orbit-slide.row.expanded(style="background-image: url('upload/photo1.jpg')")
 				.slide-content.small-10.small-centered.columns.text-center
@@ -9,3 +9,14 @@ block page
 			li.orbit-slide.row.expanded(style="background-image: url('upload/photo2.jpg')")
 				.slide-content.small-10.small-centered.columns.text-center
 					img(src='upload/slider-logo.png' width='380')
+	section#about-us.row(data-equalizer data-equalize-on="large")
+		.large-9.large-push-1.columns.section-title
+			h6 Про компанію
+		.small-10.small-push-1.large-5.large-pull-0.columns.section-image(data-equalizer-watch style="background-image: url('upload/about.jpg')")
+		.small-10.small-push-1.large-5.large-pull-0.columns.end.section-desc(data-equalizer-watch)
+			h3 Коротка історія
+			p
+				| це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів. "Риба" не тільки успішно пережила п'ять століть, але й прижилася в електронному верстуванні, залишаючись по суті незмінною.
+	section#team.row
+		.large-9.large-push-1.columns.section-title
+			h6 Посадові особи

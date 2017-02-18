@@ -1,9 +1,64 @@
 .main-slider {
-  .orbit-slide{
+  .orbit-slide {
     height: 60vh;
     background-size: cover;
+    background-position: center;
   }
-  .slide-content{
+  .slide-content {
     margin-top: 25vh;
+  }
+}
+
+.section-title {
+  margin: 8.75rem 0 3.43rem 0;
+  padding: 0 2rem;
+  position: relative;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  h6 {
+    color: $medium-gray;
+  }
+}
+
+.section-image {
+  background-size: cover;
+  height: 20rem;
+}
+
+.section-desc {
+  h3 {
+    margin: 3.125rem 0 2.5rem ;
+    font-weight: 500;
+  }
+}
+
+@media screen and #{breakpoint(medium)} {
+  .section-title {
+    &:after {
+      content: '';
+      width: 8.5rem;
+      border-bottom: 1px solid rgba(138, 138, 138, 0.5);
+      position: absolute;
+      bottom: 0;
+      right: 2rem;
+    }
+  }
+}
+
+@media screen and #{breakpoint(large)} {
+  .section-title {
+    padding: 0;
+    margin: 9.375rem 0 3.75rem 0;
+    &:after {
+      right: 0;
+    }
+  }
+  .section-desc {
+    float: left;
+    padding: 3.5rem 0 5.5rem 5.5rem;
+    h3 {
+      margin: 0 0 1.5rem 0;
+      font-weight: 500;
+    }
   }
 }
