@@ -23,7 +23,7 @@
 .section-image {
   background-size: cover;
   height: 20rem;
-  img{
+  img {
     @include absolute-center;
   }
 }
@@ -107,41 +107,41 @@
   font-size: 0.875rem;
 }
 
-.activity{
-  .section-desc, .section-image{
+.activity {
+  .section-desc, .section-image {
     margin-bottom: 3.75rem;
   }
 }
 
-.activity-title{
+.activity-title {
   margin: 3.75rem 0 2.75rem;
   color: $light;
 }
 
-.activity-numb{
+.activity-numb {
   font-size: 3.75rem;
   margin-right: 1rem;
 }
 
-.activity-desc{
+.activity-desc {
   font-size: 1rem;
   text-transform: uppercase;
 }
 
-.partners{
+.partners {
   margin-top: 8.75rem;
   padding: 2.75rem 0 1.5rem;
   background: $very-light;
 }
 
-.gallery{
-  img{
+.gallery {
+  img {
     display: block;
   }
 }
 
-.gallery-item{
-  .gallery-desc{
+.gallery-item {
+  .gallery-desc {
     position: absolute;
     top: 1rem;
     right: 2rem;
@@ -156,14 +156,14 @@
     align-items: center;
     justify-content: center;
   }
-  &:hover{
-    .gallery-desc{
+  &:hover {
+    .gallery-desc {
       opacity: 1;
     }
   }
 }
 
-.gallery-more{
+.gallery-more {
   display: flex;
   justify-content: center;
   font-family: "GothamPro-Bold";
@@ -171,29 +171,122 @@
   margin-top: 1rem;
 }
 
-.partners-list, .documents-list{
+.partners-list, .documents-list {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
 
-.doc-title{
+.doc-title {
   float: left;
 }
 
-.doc-title, .doc-upload{
+.doc-title, .doc-upload {
   font-family: "GothamPro-Bold";
   font-size: rem-calc(14);
 }
 
-.doc-upload{
+.doc-upload {
   display: inline-block;
   margin-top: 1rem;
   text-transform: uppercase;
   border-bottom: 3px solid $primary-color;
-  &:after{
+  &:after {
     content: url('../upload/download-link.png');
     margin-left: 1rem;
+  }
+}
+
+.proposition {
+  margin-top: 8.75rem;
+  position: relative;
+  &:before, &:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+  &:before{
+    background-image: url('../upload/photo2.jpg');
+    background-size: cover;
+    top: 0;
+    bottom: 60%;
+  }
+  &:after{
+    top: 40%;
+    bottom: 0;
+  }
+  .section-title {
+    h6 {
+      color: $white;
+    }
+  }
+}
+
+.proposition-form, .proposition-info {
+  padding: 2rem;
+  box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.41);
+}
+
+.proposition-form {
+  background: $white;
+  input, input:focus, textarea {
+    border-bottom: 1px solid $light;
+  }
+}
+
+.proposition-form-title, .proposition-info-title{
+  font-family: 'GothamProNarrow-Medium';
+}
+
+.proposition-form-title {
+  position: relative;
+  margin-bottom: rem-calc(30);
+  &:after {
+    content: url('../upload/email.png');
+    position: absolute;
+    right: 0;
+  }
+}
+
+.proposition-submit.button.hollow {
+  font-family: "GothamProNarrow-Bold";
+  text-transform: uppercase;
+  float: right;
+  padding: 1.25rem 2.5rem;
+  border-width: 2px;
+  color: $black;
+}
+
+.proposition-info {
+  background-color: #196A83;
+  position: relative;
+  &:after{
+    content: url(../upload/gas-inv.png);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.proposition-info-title, .proposition-info-list {
+  color: $white;
+}
+
+.proposition-info-list{
+  margin-top: 3.75rem;
+  .columns{
+    margin-bottom: 2.75rem;
+  }
+  img{
+    float: right;
+  }
+}
+
+.proposition-social{
+  li{
+    padding-right: 2rem;
   }
 }
 
@@ -209,8 +302,12 @@
     }
   }
 
-  .partners{
+  .partners {
     padding: 3.75rem 0 1.875rem;
+  }
+
+  .proposition-form, .proposition-info {
+    padding: 4rem 5rem;
   }
 }
 
@@ -261,12 +358,37 @@
     flex-wrap: nowrap;
   }
 
-  .activity-title{
+  .activity-title {
     margin: 0 0 2.75rem;
   }
 
-  .partners{
+  .partners {
     margin-top: 9.375rem;
     padding: 1.875rem 0 0;
+  }
+
+  .proposition {
+    margin-top: 9.375rem;
+    padding-bottom: 1rem;
+    &:before{
+      top: 0;
+      bottom: 30%;
+    }
+    &:after{
+      top: 70%;
+      bottom: 0;
+    }
+  }
+
+  .proposition-form, .proposition-info {
+    padding: 3.75rem 5.625rem;
+  }
+
+  .proposition-submit.button.hollow {
+    padding: 1rem 3.75rem;
+  }
+
+  .proposition-info {
+    left: 0;
   }
 }

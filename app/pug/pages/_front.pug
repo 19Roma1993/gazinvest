@@ -187,8 +187,51 @@ block page
                             img(src='upload/file.png')
                         .small-4.columns.doc-title Угода про конфіденційність
                     a.doc-upload(href='#') скачати
-    section#proposition.row
-        .large-9.large-push-1.columns.section-title
-            h6 пропозиція
+    section#proposition.proposition
+        .row(data-equalizer data-equalize-on="large")
+            .large-9.large-push-1.columns.section-title
+                h6 пропозиція
+            .small-10.small-push-1.large-pull-0.large-7.columns.proposition-form(data-equalizer-watch)
+                h3.proposition-form-title Напишіть нам
+                p
+                    | Для подальшої співпраці, дольової участі чи інвестицій - заповніть форму
+                form.form
+                    .row
+                        .columns
+                            label Прізвище ім’я
+                                input(type='text')
+                        .large-7.columns
+                            label Email
+                                input(type='email')
+                        .large-5.columns
+                            label Телефон
+                                input(type='text')
+                        .columns
+                            label Повідомлення
+                                textarea(rows='5')
+                        .columns
+                            input.button.hollow.proposition-submit(type='submit' value='Надіслати')
+            .small-10.small-push-1.large-pull-0.large-5.columns.proposition-info(data-equalizer-watch)
+                h3.proposition-info-title Контакти
+                .row.proposition-info-list
+                    .small-2.columns
+                        img(src='upload/location.png')
+                    .small-10.columns
+                        p 77400 Івано-Франківська область, Тисменицький район, м. Тисмениця, вул. Горбаля, 7
+                    .small-2.columns
+                        img(src='upload/smartphone.png')
+                    .small-10.columns
+                        p 067 671 20 82
+                    .small-2.columns
+                        img(src='upload/email-2.png')
+                    .small-10.columns
+                        p ttrv@i.ua
+                .proposition-social
+                    ul.menu
+                        li
+                            img(src='upload/linkedin-1.png')
+                        li
+                            img(src='upload/facebook-1.png')
+
 
 

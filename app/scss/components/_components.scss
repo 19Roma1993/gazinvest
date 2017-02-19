@@ -146,3 +146,21 @@
   }
 }
 
+/*  FOOTER  */
+.footer{
+  padding: 1.5rem 0 3rem;
+}
+.copyright{
+  font-size: rem-calc(12);
+  text-transform: uppercase;
+  color: #8E8D8D;
+  text-align: center;
+}
+@media screen and #{breakpoint(large)} {
+  .footer{
+    padding: 1.8rem 0;
+  }
+  .copyright{
+    text-align: right;
+  }
+}

@@ -160,7 +160,7 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: 'GothamPro-Bold', $body-font-family;
+$header-font-family: 'GothamProNarrow-Bold', $body-font-family;
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
@@ -315,7 +315,7 @@ $button-sizes: (
 $button-palette: $foundation-palette;
 $button-opacity-disabled: 0.25;
 $button-background-hover-lightness: -20%;
-$button-hollow-hover-lightness: -50%;
+$button-hollow-hover-lightness: -0%;
 $button-transition: background-color 0.25s ease-out, color 0.25s ease-out;
 
 // 12. Button Group
@@ -421,9 +421,9 @@ $input-prefix-color: $black;
 $input-prefix-background: $light-gray;
 $input-prefix-border: 1px solid $medium-gray;
 $input-prefix-padding: 1rem;
-$form-label-color: $black;
-$form-label-font-size: rem-calc(14);
-$form-label-font-weight: $global-weight-normal;
+$form-label-color: $light;
+$form-label-font-size: rem-calc(12);
+$form-label-font-weight: $global-weight-bold;
 $form-label-line-height: 1.8;
 $select-background: $white;
 $select-triangle-color: $dark-gray;
@@ -431,15 +431,15 @@ $select-radius: $global-radius;
 $input-color: $black;
 $input-placeholder-color: $medium-gray;
 $input-font-family: inherit;
-$input-font-size: rem-calc(16);
-$input-font-weight: $global-weight-normal;
+$input-font-size: rem-calc(14);
+$input-font-weight: $global-weight-bold;
 $input-background: $white;
 $input-background-focus: $white;
 $input-background-disabled: $light-gray;
-$input-border: 1px solid $medium-gray;
-$input-border-focus: 1px solid $dark-gray;
-$input-shadow: inset 0 1px 2px rgba($black, 0.1);
-$input-shadow-focus: 0 0 5px $medium-gray;
+$input-border: inherit;
+$input-border-focus: inherit;
+$input-shadow: none;
+$input-shadow-focus: none;
 $input-cursor-disabled: not-allowed;
 $input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
 $input-number-spinners: true;
