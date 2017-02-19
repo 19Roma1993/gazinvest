@@ -128,6 +128,18 @@
   text-transform: uppercase;
 }
 
+.partners{
+  margin-top: 8.75rem;
+  padding: 2.75rem 0 1.5rem;
+  background: $very-light;
+}
+
+.partners-list{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 @media screen and #{breakpoint(medium)} {
   .section-title {
     &:after {
@@ -138,6 +150,10 @@
       bottom: 0;
       right: 2rem;
     }
+  }
+
+  .partners{
+    padding: 3.75rem 0 1.875rem;
   }
 }
 
@@ -190,5 +206,10 @@
 
   .activity-title{
     margin: 0 0 2.75rem;
+  }
+
+  .partners{
+    margin-top: 9.375rem;
+    padding: 1.875rem 0 0;
   }
 }
