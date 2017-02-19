@@ -23,9 +23,13 @@
 .section-image {
   background-size: cover;
   height: 20rem;
+  img{
+    @include absolute-center;
+  }
 }
 
 .section-desc {
+  font-size: 0.875rem;
   h3 {
     margin: 3.125rem 0 2.5rem;
     font-weight: 500;
@@ -103,6 +107,27 @@
   font-size: 0.875rem;
 }
 
+.activity{
+  .section-desc, .section-image{
+    margin-bottom: 3.75rem;
+  }
+}
+
+.activity-title{
+  margin: 3.75rem 0 2.75rem;
+  color: $light;
+}
+
+.activity-numb{
+  font-size: 3.75rem;
+  margin-right: 1rem;
+}
+
+.activity-desc{
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
 @media screen and #{breakpoint(medium)} {
   .section-title {
     &:after {
@@ -126,7 +151,7 @@
   }
   .section-desc {
     float: left;
-    padding: 3.5rem 0 5.5rem 5.5rem;
+    padding: 2.5rem 0;
     h3 {
       margin: 0 0 1.5rem 0;
       font-weight: 500;
@@ -161,5 +186,9 @@
 
   .info {
     flex-wrap: nowrap;
+  }
+
+  .activity-title{
+    margin: 0 0 2.75rem;
   }
 }
