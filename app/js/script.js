@@ -1,4 +1,8 @@
-$(document).foundation();
+$(document).foundation()
+
+window.addEventListener("load", function () {
+    $(".masonry").masonry();
+}, false);
 
 $(document).ready(function () {
     var mobileMenuExpanded = $('.main-menu-wrap').add($('.free-space')),
@@ -21,4 +25,8 @@ $(document).ready(function () {
     });
 
     $('#team-tabs').foundation('selectTab', $('.team-content').find('.tabs-panel').first().attr('id'));
+
+    $('#gallery').lightGallery({
+        selector: '.gallery-item a'
+    });
 });
