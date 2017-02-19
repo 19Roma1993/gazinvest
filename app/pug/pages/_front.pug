@@ -13,7 +13,7 @@ block page
         .large-9.large-push-1.columns.section-title
             h6 Про компанію
         .small-10.small-push-1.large-5.large-pull-0.columns.section-image(data-equalizer-watch style="background-image: url('upload/about.jpg')")
-        .small-10.small-push-1.large-4.columns.end.section-desc(data-equalizer-watch)
+        .small-10.small-push-1.large-4.columns.section-desc(data-equalizer-watch)
             h3 Коротка історія
             p
                 | це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів. "Риба" не тільки успішно пережила п'ять століть, але й прижилася в електронному верстуванні, залишаючись по суті незмінною.
@@ -43,7 +43,7 @@ block page
                         h6.team-name Евтушенко Тарас
                         span.team-post Главный бухгалтер
         .team-divider
-        .small-10.small-push-1.columns.end.team-content
+        .small-10.small-push-1.columns.team-content
             .tabs-content(data-tabs-content='team-tabs')
                 #panel1.tabs-panel
                     p
@@ -73,7 +73,7 @@ block page
             h6 Діяльність
         .row(data-equalizer data-equalize-on="large")
             .small-10.small-push-1.large-5.large-pull-0.columns.section-image(data-equalizer-watch style="background-image: url('upload/act1.jpg')")
-            .small-10.small-push-1.large-4.columns.end.section-desc(data-equalizer-watch)
+            .small-10.small-push-1.large-4.columns.section-desc(data-equalizer-watch)
                 .activity-title
                     span.activity-numb 01
                     span.activity-desc / Наша діяльність
@@ -88,11 +88,11 @@ block page
                 h3 Географія видобутку
                 p
                     | Suspendisse diam est, egestas eu vehicula vel, faucibus eget metus. Vivamus pretium eget est porta bibendum. Integer dignissim aliquam venenatis. Vivamus eget mi in orci accumsan dapibus vitae ut tortor. Duis dapibus tincidunt sagittis. Vivamus vel arcu quis tortor dapibus rutrum. Pellentesque lobortis consequat leo nec consectetur. Vestibulum pharetra rutrum turpis at efficitur.
-            .small-10.small-push-1.large-5.large-push-2.columns.end.section-image(data-equalizer-watch)
+            .small-10.small-push-1.large-5.large-push-2.columns.section-image(data-equalizer-watch)
                 img(src='upload/act2.png')
         .row(data-equalizer data-equalize-on="large")
             .small-10.small-push-1.large-5.large-pull-0.columns.section-image(data-equalizer-watch style="background-image: url('upload/photo2.jpg')")
-            .small-10.small-push-1.large-4.columns.end.section-desc(data-equalizer-watch)
+            .small-10.small-push-1.large-4.columns.section-desc(data-equalizer-watch)
                 .activity-title
                     span.activity-numb 03
                     span.activity-desc / дослідження
@@ -161,6 +161,32 @@ block page
     section#documents.row
         .large-9.large-push-1.columns.section-title
             h6 документи
+        .small-10.small-centered.large-11.columns
+            .row.small-up-1.medium-up-2.large-up-4.documents-list
+                .column.column-block
+                    .row.collapse
+                        .small-4.columns
+                            img(src='upload/file.png')
+                        .small-4.columns.doc-title Спеціальні дозволи
+                    a.doc-upload(href='#') скачати
+                .column.column-block
+                    .row.collapse
+                        .small-4.columns
+                            img(src='upload/file.png')
+                        .small-4.columns.doc-title Дозволи на роботи
+                    a.doc-upload(href='#') скачати
+                .column.column-block
+                    .row.collapse
+                        .small-4.columns
+                            img(src='upload/file.png')
+                        .small-4.columns.doc-title Поточна фінансова звітність (річна)
+                    a.doc-upload(href='#') скачати
+                .column.column-block
+                    .row.collapse
+                        .small-4.columns
+                            img(src='upload/file.png')
+                        .small-4.columns.doc-title Угода про конфіденційність
+                    a.doc-upload(href='#') скачати
     section#proposition.row
         .large-9.large-push-1.columns.section-title
             h6 пропозиція

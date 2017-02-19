@@ -171,10 +171,30 @@
   margin-top: 1rem;
 }
 
-.partners-list{
+.partners-list, .documents-list{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+}
+
+.doc-title{
+  float: left;
+}
+
+.doc-title, .doc-upload{
+  font-family: "GothamPro-Bold";
+  font-size: rem-calc(14);
+}
+
+.doc-upload{
+  display: inline-block;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  border-bottom: 3px solid $primary-color;
+  &:after{
+    content: url('../upload/download-link.png');
+    margin-left: 1rem;
+  }
 }
 
 @media screen and #{breakpoint(medium)} {
